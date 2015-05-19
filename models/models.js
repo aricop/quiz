@@ -23,7 +23,7 @@ var sequelize = new Sequelize(DB_name, user, pwd,
 	protocol: protocol,
 	port: port,
 	host: host,
-	storage: storage	// solo SQLite (.env)
+	storage: storage,	// solo SQLite (.env)
 	omitNull: true	// Solo Postgres
 	}
 );
@@ -41,6 +41,9 @@ sequelize.sync().then(function() {
 		if(count === 0) {	// la tabla se inicializa solo si esta vacia
 			Quiz.create({ pregunta: 'Capital de Italia',
 					respuesta: 'Roma'
+			});
+			Quiz.create({ pregunta: 'Capital de Portugal',
+					respuesta: 'Lisboa'
 			})
 			.then(function(){console.log('Base de datos inicializada')});
 		};
