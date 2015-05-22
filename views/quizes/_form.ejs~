@@ -2,7 +2,7 @@
 <input type="text" id="preg" name="quiz[pregunta]" value="<%= quiz.pregunta %>"/> <p>
 
 <label for="resp" class="rem">Respuesta:</label>
-<input type="text" id="resp" name="quiz[respuesta]" value="<%= quiz.respuesta %>"/> <p>
+<input type="text" id="resp" name="quiz[respuesta]" value="<%= respuesta %>"/> <p>
 
 <a href="/quizes"><button type="button">Cancelar</button></a>
-<a href="/quizes/create"><input type="submit" value="Guardar">
+<input type="submit" value="Guardar">
